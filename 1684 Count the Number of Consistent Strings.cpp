@@ -1,3 +1,5 @@
+// Problem Link : https://leetcode.com/contest/biweekly-contest-41/problems/count-the-number-of-consistent-strings/
+
 class Solution {
 public:
 	int countConsistentStrings(string allowed, vector<string>& words) {
