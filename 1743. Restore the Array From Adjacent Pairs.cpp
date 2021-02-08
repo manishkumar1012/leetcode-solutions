@@ -1,3 +1,5 @@
+// Problem link: https://leetcode.com/contest/weekly-contest-226/problems/restore-the-array-from-adjacent-pairs/
+
 class Solution {
 public:
 	void dfs(int curr, unordered_map<int, vector<int> >& graph, vector<int>& res, unordered_map<int, int>& vis) {
