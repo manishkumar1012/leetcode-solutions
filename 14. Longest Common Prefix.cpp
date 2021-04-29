@@ -6,25 +6,24 @@
 
 class Solution {
 public:
-    string longestCommonPrefix(vector<string>& str) {
-        int n = str.size();
-        if(n==0) return "";
-        
-        string ans  = "";
-        sort(begin(str), end(str));
-        string a = str[0];
-        string b = str[n-1];
-        
-        for(int i=0; i<a.size(); i++){
-            if(a[i]==b[i]){
-                ans = ans + a[i];
+    string longestCommonPrefix(vector<string>& strs) {
+        int i = 0, j = 0;
+        string res = "";
+        int ind = 0;
+        int n = strs.size();
+        if (!n)
+            return res;
+        while (true) {
+            if (ind >= strs[0].length())
+                return res;
+            int currChar = strs[0][ind];
+            for (int i = 1; i < n; i++) {
+                if (ind >= strs[i].length() || (strs[i][ind] != currChar))
+                    return res;
             }
-            else{
-                break;
-            }
+            ind++;
+            res += currChar;
         }
-        
-        return ans;
-        
+        return res;
     }
 };
