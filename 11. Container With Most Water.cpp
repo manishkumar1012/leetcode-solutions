@@ -11,12 +11,16 @@ public:
         while (left < right) {
         	int minh = min(height[left], height[right]);
         	res = max(res, minh * (right - left));
+            if (height[left] < height[right])
+                left++;
+            else
+                right--;
 
-        	while (left < right && height[left] <= minh)
-        		left++;
+//         	while (left < right && height[left] <= minh)
+//         		left++;
 
-			while (right > left && height[right] <= minh)
-        		right--;        	
+// 			while (right > left && height[right] <= minh)
+//         		right--;        	
         }
         return res;
     }
