@@ -1,8 +1,4 @@
 // Problem link: https://leetcode.com/problems/longest-common-prefix/
-// Idea: The code below is very much self explanatory.
-    // We first sort the array of strings.
-    // Then, we choose the first and last string in the array. [They are supposed to be the most different among all the pairs of strings in the sorted array]
-    // We just compare how many common characters match from index i = 0 of these two strings.
 
 class Solution {
 public:
